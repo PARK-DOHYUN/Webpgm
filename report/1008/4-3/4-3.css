@@ -1,0 +1,22 @@
+table,tr,td{
+    border: 1px solid;
+}
+
+#Brown{
+    background-color: brown;
+}
+#DeepSkyBlue{
+    background-color: DeepSkyBlue;
+}
+#Blueviolet{
+    background-color: Blueviolet;
+}
+#Gold{
+    background-color: Gold;
+}
+#DarkOrange{
+    background-color: DarkOrange;
+}
+#OliveDrab{
+    background-color: OliveDrab;
+}

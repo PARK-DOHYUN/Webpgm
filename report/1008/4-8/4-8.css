@@ -1,0 +1,7 @@
+img{
+    border: 15px solid;
+    padding: 5px;
+
+
+    border-image: url(./poto.png) 70 round;
+}

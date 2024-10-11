@@ -1,0 +1,35 @@
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+header {
+    border-bottom: 1px solid;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+p {
+    font-family: 휴먼편지체;
+    font-size: 1em;
+    text-indent: 1em;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+footer {
+    border-radius: 10px;
+    background-color: darkorange;
+}
+
+#contents {
+    border: 1px solid;
+}
+
+.contentsText {
+    text-shadow: 3px 3px 5px skyblue;
+}

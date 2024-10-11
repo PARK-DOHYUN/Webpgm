@@ -1,0 +1,57 @@
+html,body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+}
+
+header {
+    border-bottom: 1px solid;
+    height: 20%;
+    width: 100%;
+    background-color: yellow;
+}
+
+nav {
+    height: 72%;
+    width: 20%;
+    background-color: orange;
+    float: left;
+}
+
+section {
+    height: 72%;
+    width: 80%;
+    background-color: skyblue;
+    float: left;
+}
+
+div {
+    height: 8%;
+    width: 100%;
+    background-color: plum;
+}
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+p {
+    font-family: 휴먼편지체;
+    font-size: 1em;
+    text-indent: 1em;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+
+.contentsText {
+    text-shadow: 3px 3px 5px skyblue;
+}
+
+img {
+    width: 400px;
+    height: 200px;
+}
