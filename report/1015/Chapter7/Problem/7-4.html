@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>일요일은 pink,다른 요일은 gold 배경</h3>
+    <hr>
+    <script>
+        const day = {
+            1 : "월요일",
+            2 : "화요일",
+            3 : "수요일",
+            4 : "목요일",
+            5 : "금요일",
+            6 : "토요일",
+            7 : "일요일"
+        };
+
+        let time = new Date();
+
+        if(time.getDay() < 7){
+            document.body.style.backgroundColor = "pink";
+        }
+        else{
+            document.body.style.backgroundColor = "gold";
+        }
+
+        document.write("오늘 : " + time.getDate() + "일," + day[time.getDay()]);
+    </script>
+</body>
+</html>
