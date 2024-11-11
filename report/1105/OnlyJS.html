@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개 페이지</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; margin: 0;">
+
+<script>
+    // Create container
+    const container = document.createElement("div");
+    container.style.maxWidth = "500px";
+    container.style.padding = "20px";
+    container.style.backgroundColor = "#ffffff";
+    container.style.borderRadius = "10px";
+    container.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.1)";
+    container.style.textAlign = "center";
+
+    // Profile image
+    const profileImage = document.createElement("img");
+    profileImage.src = "https://via.placeholder.com/128";
+    profileImage.alt = "프로필 사진";
+    profileImage.style.width = "128px";
+    profileImage.style.height = "128px";
+    profileImage.style.borderRadius = "50%";
+    profileImage.style.border = "4px solid #007bff";
+    profileImage.style.marginBottom = "20px";
+    container.appendChild(profileImage);
+
+    // Name
+    const name = document.createElement("h1");
+    name.innerText = "박도현";
+    name.style.fontSize = "24px";
+    name.style.color = "#007bff";
+    container.appendChild(name);
+
+    // University and Major
+    const university = document.createElement("h2");
+    university.innerText = "경성대학교 소프트웨어학과";
+    university.style.fontSize = "18px";
+    university.style.color = "#555555";
+    container.appendChild(university);
+
+    // Introduction paragraph
+    const intro = document.createElement("p");
+    intro.innerText = "안녕하세요! 경성대학교 소프트웨어학과에 재학 중인 박도현입니다.";
+    intro.style.color = "#333333";
+    intro.style.marginBottom = "20px";
+    container.appendChild(intro);
+
+    // Student ID Section
+    const studentIDSection = document.createElement("div");
+    studentIDSection.style.backgroundColor = "#e9f5ff";
+    studentIDSection.style.borderRadius = "8px";
+    studentIDSection.style.padding = "15px";
+    studentIDSection.style.marginBottom = "10px";
+
+    const studentIDTitle = document.createElement("h3");
+    studentIDTitle.innerText = "학번";
+    studentIDTitle.style.fontSize = "16px";
+    studentIDTitle.style.color = "#007bff";
+    studentIDSection.appendChild(studentIDTitle);
+
+    const studentID = document.createElement("p");
+    studentID.innerText = "2021663028";
+    studentID.style.color = "#333333";
+    studentIDSection.appendChild(studentID);
+
+    container.appendChild(studentIDSection);
+
+    // Interests Section
+    const interestsSection = document.createElement("div");
+    interestsSection.style.backgroundColor = "#f7f9fc";
+    interestsSection.style.borderRadius = "8px";
+    interestsSection.style.padding = "15px";
+    interestsSection.style.marginBottom = "10px";
+
+    const interestsTitle = document.createElement("h3");
+    interestsTitle.innerText = "관심사";
+    interestsTitle.style.fontSize = "16px";
+    interestsTitle.style.color = "#555555";
+    interestsSection.appendChild(interestsTitle);
+
+    const interests = document.createElement("p");
+    interests.innerText = "코딩, 그래픽 디자인, 음악, 여행";
+    interests.style.color = "#333333";
+    interestsSection.appendChild(interests);
+
+    container.appendChild(interestsSection);
+
+    // Goals Section
+    const goalsSection = document.createElement("div");
+    goalsSection.style.backgroundColor = "#f7f9fc";
+    goalsSection.style.borderRadius = "8px";
+    goalsSection.style.padding = "15px";
+
+    const goalsTitle = document.createElement("h3");
+    goalsTitle.innerText = "목표";
+    goalsTitle.style.fontSize = "16px";
+    goalsTitle.style.color = "#555555";
+    goalsSection.appendChild(goalsTitle);
+
+    const goals = document.createElement("p");
+    goals.innerText = "게임 프로그래머가 되어 멋진 인터랙티브 경험을 창조하고 싶습니다!";
+    goals.style.color = "#333333";
+    goalsSection.appendChild(goals);
+
+    container.appendChild(goalsSection);
+
+    // Append the container to the body
+    document.body.appendChild(container);
+</script>
+
+</body>
+</html>
