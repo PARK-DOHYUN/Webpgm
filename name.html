@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Centered Window with Canvas</title>
+    <style>
+        #can{
+            position: absolute;
+            left:300px;
+            top:150px
+        }
+    </style>
+    <script>
+
+        const width = 300;
+        const height = 300;
+        const l = (window.screen.width - width) / 2;
+        const t = (window.screen.height - height) / 2;
+        
+        window.open(
+            "", 
+            null,      
+            "width=" + width+",height="+height+",left="+l+",top="+t
+        );
+    </script>
+        
+</head>
+
+<body>
+
+    <canvas id="can" ,width="300" height="400">
+    </canvas>
+    <script>
+        let canvas = document.getElementById("can");
+        let context = canvas.getContext("2d");
+
+        context.beginPath();
+
+        //ㅂ
+        context.moveTo(10, 10);
+        context.lineTo(10, 50);
+        context.lineTo(50, 50);
+        context.lineTo(50, 10)
+        context.moveTo(10, 30);
+        context.lineTo(50, 30)
+
+        //ㅏ
+        context.moveTo(60, 10);
+        context.lineTo(60, 50);
+        context.moveTo(60, 30);
+        context.lineTo(80, 30);
+
+        //ㄱ
+        context.moveTo(20, 60);
+        context.lineTo(60, 60);
+        context.lineTo(60, 90);
+
+        //ㄷ
+        context.moveTo(140, 10);
+        context.lineTo(90, 10);
+        context.lineTo(90, 50);
+        context.lineTo(140, 50);
+
+        //ㅗ
+        context.moveTo(110, 50);
+        context.lineTo(110, 90);
+        context.moveTo(90, 90);
+        context.lineTo(140, 90);
+
+        //ㅎ
+        context.moveTo(160, 10);
+        context.lineTo(210, 10);
+        context.moveTo(160, 30);
+        context.lineTo(210, 30);
+        context.moveTo(200, 60)
+        context.arc(180, 60, 20, 0, 2 * Math.PI, true);
+
+        //ㅕ
+        context.moveTo(210, 40);
+        context.lineTo(230, 40);
+        context.moveTo(210, 60);
+        context.lineTo(230, 60);
+        context.moveTo(230, 10);
+        context.lineTo(230, 80);
+
+
+        //ㄴ
+        context.moveTo(180, 90);
+        context.lineTo(180, 120);
+        context.lineTo(220, 120);
+
+        context.stroke();
+    </script>
+</body>
+
+</html>
