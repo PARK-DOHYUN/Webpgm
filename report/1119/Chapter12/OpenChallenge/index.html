@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어장 만들기</title>
+    <style>
+        .buttons {
+            display: flex;
+            gap: 5px;
+        }
+    </style>
+    <script>
+        function windowSession() {
+            if (!window.sessionStorage) {
+                alert("지원하지 않습니다.");
+                return;
+            }
+        }
+
+
+        function save() {
+            windowSession();
+
+            let english = document.getElementById("english").value;
+            let korean = document.getElementById("korean").value;
+
+            english = english.trim();
+            korean = korean.trim();
+
+            // 존재 여부 확인
+            if (sessionStorage.getItem(english) != null) {
+                let b = confirm(english + "가 이미 있습니다. 수정하시겠습니까?");
+                if (b == false) return;
+            }
+
+            sessionStorage.setItem(english, korean);
+
+            document.getElementById("english").value = "";
+            document.getElementById("korean").value = "";
+        }
+
+        function search() {
+            windowSession();
+
+            let english = document.getElementById("english").value;
+            if (english == null) return;
+
+            english = english.trim();
+            let korean = sessionStorage.getItem(english);
+
+            if (korean == null) {
+                alert(english + "는 없는 단어 입니다.");
+                document.getElementById("korean").value = "";
+                return;
+            }
+
+            document.getElementById("korean").value = korean;
+        }
+
+        function remove() {
+            windowSession();
+
+            let english = document.getElementById("english").value;
+            if (english == null) return;
+
+            english = english.trim();
+
+            if (sessionStorage.getItem(english) == null) {
+                alert(english + "가 없습니다.");
+                return;
+            }
+
+            sessionStorage.removeItem(english);
+
+            document.getElementById("english").value = "";
+            document.getElementById("korean").value = "";
+        }
+
+        function show() {
+            window.open("show.html", "show");
+        }
+    </script>
+</head>
+
+<body>
+    <h3>나의 단어장 만들기</h3>
+    <hr>
+    <form>
+        <label>영어<input id="english" type="text"></label>
+        <label>한글<input id="korean" type="text"></label>
+
+        <div class="buttons">
+            <input type="button" value="단어 저장" size="10" onclick="save()">
+            <input type="button" value="영단어 검색" size="10" onclick="search()">
+            <input type="button" value="단어 삭제" size="10" onclick="remove()">
+            <input type="button" value="전체 보기" size="10" onclick="show()">
+        </div>
+    </form>
+</body>
+
+</html>
